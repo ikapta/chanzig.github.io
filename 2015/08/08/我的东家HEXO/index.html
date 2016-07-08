@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>我的东家HEXO | kapta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="无意间的一次玩弄grunt，发现了hexo，就花了点时间玩了玩,建了个博客。
+安装过程如果本机安装了node 忽略下面一段
+安装git 和 node这个就不介绍了，分别直接官网 git node 下载安装就好了，建议全局安装，不要逼格太高瞎折腾。其实也没啥关系，猿猿都爱折腾。
+错误解决// 各种npm安装的插件对其操作命令过程中，如果系统提示没有这个命令，基本上不是需要update,就是没有全局">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的东家HEXO">
+<meta property="og:url" content="http://fuchaoo.com/2015/08/08/我的东家HEXO/index.html">
+<meta property="og:site_name" content="kapta">
+<meta property="og:description" content="无意间的一次玩弄grunt，发现了hexo，就花了点时间玩了玩,建了个博客。
+安装过程如果本机安装了node 忽略下面一段
+安装git 和 node这个就不介绍了，分别直接官网 git node 下载安装就好了，建议全局安装，不要逼格太高瞎折腾。其实也没啥关系，猿猿都爱折腾。
+错误解决// 各种npm安装的插件对其操作命令过程中，如果系统提示没有这个命令，基本上不是需要update,就是没有全局">
+<meta property="og:updated_time" content="2016-07-08T21:03:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我的东家HEXO">
+<meta name="twitter:description" content="无意间的一次玩弄grunt，发现了hexo，就花了点时间玩了玩,建了个博客。
+安装过程如果本机安装了node 忽略下面一段
+安装git 和 node这个就不介绍了，分别直接官网 git node 下载安装就好了，建议全局安装，不要逼格太高瞎折腾。其实也没啥关系，猿猿都爱折腾。
+错误解决// 各种npm安装的插件对其操作命令过程中，如果系统提示没有这个命令，基本上不是需要update,就是没有全局">
+  
+    <link rel="alternative" href="/atom.xml" title="kapta" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="http://cdn.bootcss.com/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+  <link rel="stylesheet" href="/css/style.css">
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?f4d605ca44729299657cb73d8ac86d2d";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+    
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/MyImg.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">kapta</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle" title="">男人许下的诺言就一定要遵守</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/chanzig" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/338944949" title="weibo">weibo</a>
+					        
+								<a class="csdn" target="_blank" href="http://blog.csdn.net/chanzig" title="csdn">csdn</a>
+					        
+								<a class="segment" target="_blank" href="http://segmentfault.com/u/kapta" title="segment">segment</a>
+					        
+								<a class="alipay" target="_blank" href="javascript:void(0)" title="alipay">alipay</a>
+					        
+								<a class="wechat" target="_blank" href="javascript:void(0)" title="wechat">wechat</a>
+					        
+								<a class="zhihu" target="_blank" href="http://zhihu.com/people/kapta" title="zhihu">zhihu</a>
+					        
+								<a class="douban" target="_blank" href="http://www.douban.com/people/chanzig/" title="douban">douban</a>
+					        
+								<a class="mail" target="_blank" href="mailto:kapta.fu@outlook.com" title="mail">mail</a>
+					        
+								<a class="facebook" target="_blank" href="#" title="facebook">facebook</a>
+					        
+								<a class="twitter" target="_blank" href="https://twitter.com/chanzig" title="twitter">twitter</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/JavaScript时间/" style="font-size: 10px;">JavaScript时间</a> <a href="/tags/Map/" style="font-size: 10px;">Map</a> <a href="/tags/Sass/" style="font-size: 10px;">Sass</a> <a href="/tags/borwser-sync/" style="font-size: 10px;">borwser-sync</a> <a href="/tags/gh-pages/" style="font-size: 10px;">gh-pages</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/glup/" style="font-size: 10px;">glup</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/js片段/" style="font-size: 10px;">js片段</a> <a href="/tags/licence/" style="font-size: 10px;">licence</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/qq表情/" style="font-size: 10px;">qq表情</a> <a href="/tags/rem/" style="font-size: 10px;">rem</a> <a href="/tags/sts/" style="font-size: 10px;">sts</a> <a href="/tags/subline/" style="font-size: 10px;">subline</a> <a href="/tags/tab/" style="font-size: 10px;">tab</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a> <a href="/tags/touch/" style="font-size: 10px;">touch</a> <a href="/tags/viewport/" style="font-size: 20px;">viewport</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/微信预览/" style="font-size: 10px;">微信预览</a> <a href="/tags/成长记录/" style="font-size: 10px;">成长记录</a> <a href="/tags/移动h5/" style="font-size: 10px;">移动h5</a> <a href="/tags/译/" style="font-size: 10px;">译</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">kapta</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+				<img lazy-src="/img/MyImg.jpg" class="js-avatar">
+			</a>
+			<hgroup>
+			  <h1 class="header-author">kapta</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">男人许下的诺言就一定要遵守</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/chanzig" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/338944949" title="weibo">weibo</a>
+			        
+						<a class="csdn" target="_blank" href="http://blog.csdn.net/chanzig" title="csdn">csdn</a>
+			        
+						<a class="segment" target="_blank" href="http://segmentfault.com/u/kapta" title="segment">segment</a>
+			        
+						<a class="alipay" target="_blank" href="javascript:void(0)" title="alipay">alipay</a>
+			        
+						<a class="wechat" target="_blank" href="javascript:void(0)" title="wechat">wechat</a>
+			        
+						<a class="zhihu" target="_blank" href="http://zhihu.com/people/kapta" title="zhihu">zhihu</a>
+			        
+						<a class="douban" target="_blank" href="http://www.douban.com/people/chanzig/" title="douban">douban</a>
+			        
+						<a class="mail" target="_blank" href="mailto:kapta.fu@outlook.com" title="mail">mail</a>
+			        
+						<a class="facebook" target="_blank" href="#" title="facebook">facebook</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/chanzig" title="twitter">twitter</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-我的东家HEXO" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/08/我的东家HEXO/" class="article-date">
+  	<time datetime="2015-08-08T10:01:25.000Z" itemprop="datePublished">2015-08-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      我的东家HEXO
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>无意间的一次玩弄<code>grunt</code>，发现了<code>hexo</code>，就花了点时间玩了玩,建了个博客。</p>
+<h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><p>如果本机安装了node 忽略下面一段</p>
+<h3 id="安装git-和-node"><a href="#安装git-和-node" class="headerlink" title="安装git 和 node"></a>安装git 和 node</h3><p>这个就不介绍了，分别直接官网 <a href="https://git-scm.com/" target="_blank" rel="external">git</a> <a href="http://nodejs.org/" target="_blank" rel="external">node</a> 下载安装就好了，建议全局安装，不要逼格太高瞎折腾。其实也没啥关系，猿猿都爱折腾。</p>
+<h4 id="错误解决"><a href="#错误解决" class="headerlink" title="错误解决"></a>错误解决</h4><p>// 各种<code>npm</code>安装的插件对其操作命令过程中，如果系统提示没有这个命令，基本上不是需要update,就是没有全局安装，需要在系统路径下注册，即弄个环境变量。比如安装hexo<code>$ npm install -g hexo</code>发现<code>$ hexo -V</code>不好使，那就找到你安装hexo的根目录，copy路径，右键我的电脑 &gt; 属性 &gt; 高级系统设置 &gt; 环境变量 &gt; 点开 <strong>系统变量Path</strong> 末尾添加类似路径C:\Program Files\nodejs\node_global。你就会发现你安装的插件都好用啦，比如<code>grunt</code> \ <code>hexo</code></p>
+<a id="more"></a>
+<h3 id="主要安装步骤"><a href="#主要安装步骤" class="headerlink" title="主要安装步骤"></a>主要安装步骤</h3><h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><p>利用<code>npm</code>命令就能全局安装hexo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo -g</div></pre></td></tr></table></figure></p>
+<p>然后你可以<code>hexo -V</code>查看版本，ok(如果命令不好使，移步上面的错误解决)</p>
+<h4 id="创建hexo文件夹"><a href="#创建hexo文件夹" class="headerlink" title="创建hexo文件夹"></a>创建hexo文件夹</h4><p>在自己需要建立文件夹的磁盘新建文件夹，然后敲下面的命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd E:/myblog</div><div class="line">$ hexo init &amp;&amp; npm install</div></pre></td></tr></table></figure></p>
+<p>先进入当前文件夹，然后两步一起走吧，初始化<code>hexo</code>,安装<code>npm</code>依赖，其实这就安装完了</p>
+<h4 id="本地运行hexo"><a href="#本地运行hexo" class="headerlink" title="本地运行hexo"></a>本地运行hexo</h4><p>执行下面的命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g &amp;&amp; hexo s    //此处可以简写</div></pre></td></tr></table></figure></p>
+<p>没那么麻烦，<code>hexo generate</code> 编译文件，你会发现目录中多了<code>public</code>文件夹，里面就是生成的静态文件，然后<code>hexo server</code>运行server，没改配置文件的话，浏览器输入<code>http://localhost:4000/</code>,就能看到自己的网站了，内置了一篇hello world的文章。</p>
+<h4 id="发布hexo"><a href="#发布hexo" class="headerlink" title="发布hexo"></a>发布hexo</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d</div></pre></td></tr></table></figure>
+<p>执行上门的命令，前提打开<code>git Bash</code>,建议hexo相关的命令直接在<code>git bash</code>上敲,还要配置根目录下的<code>_config.yml</code>文件，<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line"><span class="attribute">type</span>: git</div><div class="line"></div><div class="line">    ## <span class="attribute">repository</span>: git<span class="variable">@gitcafe</span>.<span class="attribute">com</span>:yourname/myblog.git</div><div class="line">    ## <span class="attribute">branch</span>: gitcafe-pages</div><div class="line">    </div><div class="line">    ## <span class="attribute">repository</span>: <span class="attribute">https</span>:<span class="comment">//github.com/yourname/myblog.git</span></div><div class="line">    ## <span class="attribute">branch</span>: master</div><div class="line">    </div><div class="line">    <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:chanzig/yourname.github.io.git</div><div class="line">    <span class="attribute">branch</span>: master</div></pre></td></tr></table></figure></p>
+<p>写法有很多种，第一种我部署到了<a href="http://gitcafe.com/" target="_blank" rel="external">gitcafe</a>上了,二三都是部署到github上，还可以合并写法，同时部署到各个仓库，得找一找格式忘了，目前我只需要<code>push</code>到一个仓库，用https:的需要在<code>deploy</code>的时候输入git账号密码，公钥密钥的ssh<a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank" rel="external">[参考移步]</a>就行了，方便。</p>
+<h5 id="发布大前提"><a href="#发布大前提" class="headerlink" title="发布大前提"></a>发布大前提</h5><p><code>github pages</code> 得了解吧，你注册git的账号显示比如<code>steven</code>，然后你建立一个仓库名字叫<code>steven.github.io</code>,随便放一个静态页在<code>master</code>分支，就能访问这个地址了<code>steven.github.io</code>，只能拥有一个这样的仓库哦。<br>其他的仓库你可以建立<code>gh-pages</code>分支，访问<code>steven.github.io/仓库名称</code>。最好的代码托管的话，把<code>hexo deploy</code>的配置<code>brnach</code> 写成<code>gh-pages</code>然后<code>master</code>分支是整个工程文件，这样挺方便的，不然一开始那种还得建一个参考保存代码，我就是那么干的。<br>在<code>[gitcafe][5]</code>上我建立仓库，先弄个<code>gitcafe-pages</code>,把代码<code>delpoy</code>上去，然后再用<code>git</code> 切换到<code>master</code>分支，push工程文件，就好了，一个分支是我们的静态文件，一个分支是我们的项目文件，妥妥的。</p>
+<h3 id="我常用hexo命令"><a href="#我常用hexo命令" class="headerlink" title="我常用hexo命令"></a>我常用hexo命令</h3><p>就是写博客以及发布保存：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">hexo n "博客名称"  //新建文章，然后再用`markdown`打开写，不然乱码</div><div class="line">hexo g &amp;&amp; hexo s //编译并查看</div><div class="line">hexo d //发布</div><div class="line"><span class="comment">&lt;!-- more --&gt;</span> //截断文章显示 more&gt;</div><div class="line"></div><div class="line">git add .</div><div class="line">git commit -m "new article"</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure></p>
+<h3 id="关于本博客"><a href="#关于本博客" class="headerlink" title="关于本博客"></a>关于本博客</h3><p>借鉴于大兄弟Litten的 <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">Yilia</a>主题，然后做了很多细节修改。</p>
+<blockquote>
+<ul>
+<li><code>Yilia</code>主题为什么用了<code>fontawesome</code>，然后阅读更多 用<code>more &gt;&gt;</code>标示，以及上一篇下一篇<code>&gt;</code>这个表示,一个字懒，本来好好的主题给毁了；</li>
+<li>还有我的天，左边栏给<code>fix</code>了，我加了一堆logo发现笔记本就看不见了，然后给改成<code>absolute</code>了；</li>
+<li><code>tag</code>什么的都给放到隐藏的菜单了，好不方便的说，分类也给<code>false</code>了，反正改成<code>absolute</code>了，下拉的时候，左边的下方空间也大了，有时间给修改一下，把<code>widget</code>全给拿出来，或者下拉一定距离的时候，加个效果<code>Ding</code><a href="http://www.bootcss.com/p/stickup/" target="_blank" rel="external">(like)</a>一下头像什么的；</li>
+<li>代码高亮黑色背景类似<code>subline</code>，太晃眼了还是喜欢浅色的类似<code>github,segment</code>的<code>markdown</code>标记，还有行内代码也不太美观，有时间给修修；</li>
+<li>自动文章目录导航也被去掉了，不喜欢，得自己动手加上去了，其实主题<a href="http://wuchong.me/jacman/" target="_blank" rel="external">Jacman</a>就挺好的，就是没用<code>jquery.lazy.load</code>,少了点特效，头部的大背景可以改精致一点，右边的<code>tag分类</code>看起来相当low,稍作修改，完全可以非常实用；</li>
+<li>额外的，我把左边的二级标题换成<a href="http://hitokoto.us/" target="_blank" rel="external">一言</a>了，纯属个人娱乐，每次刷新页面都会请求一次换一言；</li>
+<li>还有一个问题，只有一篇文章的情况下，不显示<code>share按钮组</code> 和 <code>duoshuo评论</code> <code>!index</code>是不是歧义了，不细究了，再写一篇就没问题了<figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="meta">%</span> <span class="keyword">if</span> <span class="comment">(!index)</span>&#123; <span class="meta">%</span>&gt;</div><div class="line">        &lt;<span class="meta">%</span>- partial<span class="comment">('post/nav')</span> <span class="meta">%</span>&gt;</div><div class="line">    &lt;<span class="meta">%</span> &#125; <span class="meta">%</span>&gt;</div><div class="line">    &lt;<span class="meta">%</span> <span class="keyword">if</span> <span class="comment">(!index &amp;&amp; theme.share)</span>&#123; <span class="meta">%</span>&gt;</div><div class="line">    &lt;<span class="meta">%</span>- partial<span class="comment">('post/share')</span> <span class="meta">%</span>&gt;</div><div class="line">    &lt;<span class="meta">%</span> &#125; <span class="meta">%</span>&gt;</div><div class="line">    </div><div class="line">    &lt;<span class="meta">%</span> <span class="keyword">if</span> <span class="comment">(!index &amp;&amp; theme.duoshuo &amp;&amp; post.comments)</span>&#123; <span class="meta">%</span>&gt;</div><div class="line">    &lt;<span class="meta">%</span>- partial<span class="comment">('post/duoshuo', &#123;</span></div><div class="line">        key: post.slug,</div><div class="line">        title: post.title,</div><div class="line">        url: config.url+url_for(post.path)</div><div class="line">      &#125;) <span class="meta">%</span>&gt;</div><div class="line">    &lt;<span class="meta">%</span> &#125; <span class="meta">%</span>&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/08/09/use-subline-text3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="fa fa-arrow-circle-left article-nav-caption"></i>
+      <div class="article-nav-title">
+        
+          use subline text3
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="我的东家HEXO" data-title="我的东家HEXO" data-url="http://fuchaoo.com/2015/08/08/我的东家HEXO/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"kapta"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+        
+        &copy; 2016 kapta
+       
+    		<!--&copy; 2016 kapta-->
+    	</div>
+      	<div class="footer-right">
+          
+          <script type="text/javascript">
+           setTimeout(function(){
+              var hjs=document.createElement('script');
+              hjs.setAttribute('src','http://api.hitokoto.us/rand?encode=jsc&fun=async');
+                  document.body.appendChild(hjs);
+              },100);
+              function async(data){
+                $('.header-subtitle').text(data.hitokoto);
+                $('.header-subtitle').prop('title',data.hitokoto);
+                // $('#hitokoto1').text(data.hitokoto);
+              }
+              async()
+         </script>
+
+        <div ><span id="hitokoto1"></span></div>
+      	<!--	<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten -->
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: undefined,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>

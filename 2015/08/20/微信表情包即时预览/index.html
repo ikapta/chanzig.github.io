@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>微信表情包即时预览 | kapta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="文本消息首先我们了解一下微信的后台发消息机制，主要我们开发用到的就是发送
+
+文本消息(带表情符号)
+图文消息
+图片
+
+领导让我们做个企业号后台和微信自带的那个最好一样的，那就做吧。本篇我们主要讲文本消息中的那个表情符号，和字长限制。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信表情包即时预览">
+<meta property="og:url" content="http://fuchaoo.com/2015/08/20/微信表情包即时预览/index.html">
+<meta property="og:site_name" content="kapta">
+<meta property="og:description" content="文本消息首先我们了解一下微信的后台发消息机制，主要我们开发用到的就是发送
+
+文本消息(带表情符号)
+图文消息
+图片
+
+领导让我们做个企业号后台和微信自带的那个最好一样的，那就做吧。本篇我们主要讲文本消息中的那个表情符号，和字长限制。">
+<meta property="og:updated_time" content="2016-07-08T21:03:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="微信表情包即时预览">
+<meta name="twitter:description" content="文本消息首先我们了解一下微信的后台发消息机制，主要我们开发用到的就是发送
+
+文本消息(带表情符号)
+图文消息
+图片
+
+领导让我们做个企业号后台和微信自带的那个最好一样的，那就做吧。本篇我们主要讲文本消息中的那个表情符号，和字长限制。">
+  
+    <link rel="alternative" href="/atom.xml" title="kapta" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="http://cdn.bootcss.com/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+  <link rel="stylesheet" href="/css/style.css">
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?f4d605ca44729299657cb73d8ac86d2d";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+    
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/MyImg.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">kapta</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle" title="">男人许下的诺言就一定要遵守</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/chanzig" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/338944949" title="weibo">weibo</a>
+					        
+								<a class="csdn" target="_blank" href="http://blog.csdn.net/chanzig" title="csdn">csdn</a>
+					        
+								<a class="segment" target="_blank" href="http://segmentfault.com/u/kapta" title="segment">segment</a>
+					        
+								<a class="alipay" target="_blank" href="javascript:void(0)" title="alipay">alipay</a>
+					        
+								<a class="wechat" target="_blank" href="javascript:void(0)" title="wechat">wechat</a>
+					        
+								<a class="zhihu" target="_blank" href="http://zhihu.com/people/kapta" title="zhihu">zhihu</a>
+					        
+								<a class="douban" target="_blank" href="http://www.douban.com/people/chanzig/" title="douban">douban</a>
+					        
+								<a class="mail" target="_blank" href="mailto:kapta.fu@outlook.com" title="mail">mail</a>
+					        
+								<a class="facebook" target="_blank" href="#" title="facebook">facebook</a>
+					        
+								<a class="twitter" target="_blank" href="https://twitter.com/chanzig" title="twitter">twitter</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/JavaScript时间/" style="font-size: 10px;">JavaScript时间</a> <a href="/tags/Map/" style="font-size: 10px;">Map</a> <a href="/tags/Sass/" style="font-size: 10px;">Sass</a> <a href="/tags/borwser-sync/" style="font-size: 10px;">borwser-sync</a> <a href="/tags/gh-pages/" style="font-size: 10px;">gh-pages</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/glup/" style="font-size: 10px;">glup</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/js片段/" style="font-size: 10px;">js片段</a> <a href="/tags/licence/" style="font-size: 10px;">licence</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/qq表情/" style="font-size: 10px;">qq表情</a> <a href="/tags/rem/" style="font-size: 10px;">rem</a> <a href="/tags/sts/" style="font-size: 10px;">sts</a> <a href="/tags/subline/" style="font-size: 10px;">subline</a> <a href="/tags/tab/" style="font-size: 10px;">tab</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a> <a href="/tags/touch/" style="font-size: 10px;">touch</a> <a href="/tags/viewport/" style="font-size: 20px;">viewport</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/微信预览/" style="font-size: 10px;">微信预览</a> <a href="/tags/成长记录/" style="font-size: 10px;">成长记录</a> <a href="/tags/移动h5/" style="font-size: 10px;">移动h5</a> <a href="/tags/译/" style="font-size: 10px;">译</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">kapta</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+				<img lazy-src="/img/MyImg.jpg" class="js-avatar">
+			</a>
+			<hgroup>
+			  <h1 class="header-author">kapta</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">男人许下的诺言就一定要遵守</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/chanzig" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/338944949" title="weibo">weibo</a>
+			        
+						<a class="csdn" target="_blank" href="http://blog.csdn.net/chanzig" title="csdn">csdn</a>
+			        
+						<a class="segment" target="_blank" href="http://segmentfault.com/u/kapta" title="segment">segment</a>
+			        
+						<a class="alipay" target="_blank" href="javascript:void(0)" title="alipay">alipay</a>
+			        
+						<a class="wechat" target="_blank" href="javascript:void(0)" title="wechat">wechat</a>
+			        
+						<a class="zhihu" target="_blank" href="http://zhihu.com/people/kapta" title="zhihu">zhihu</a>
+			        
+						<a class="douban" target="_blank" href="http://www.douban.com/people/chanzig/" title="douban">douban</a>
+			        
+						<a class="mail" target="_blank" href="mailto:kapta.fu@outlook.com" title="mail">mail</a>
+			        
+						<a class="facebook" target="_blank" href="#" title="facebook">facebook</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/chanzig" title="twitter">twitter</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-微信表情包即时预览" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/20/微信表情包即时预览/" class="article-date">
+  	<time datetime="2015-08-19T16:42:17.000Z" itemprop="datePublished">2015-08-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      微信表情包即时预览
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/qq表情/">qq表情</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信预览/">微信预览</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="文本消息"><a href="#文本消息" class="headerlink" title="文本消息"></a>文本消息</h3><p>首先我们了解一下微信的后台发消息机制，主要我们开发用到的就是发送</p>
+<ul>
+<li>文本消息(带表情符号)</li>
+<li>图文消息</li>
+<li>图片</li>
+</ul>
+<p>领导让我们做个企业号后台和微信自带的那个最好一样的，那就做吧。<br>本篇我们主要讲文本消息中的那个表情符号，和字长限制。<br><a id="more"></a></p>
+<h3 id="1-表情符号"><a href="#1-表情符号" class="headerlink" title="1.表情符号"></a>1.表情符号</h3><p>有必要先去了解一下表情机制，这里推荐阅读了解:</p>
+<ul>
+<li><a href="http://blog.csdn.net/lyq8479/article/details/9229637" target="_blank" rel="external">微信公众帐号开发教程第11篇-符号表情的发送（上）</a></li>
+<li><a href="http://blog.csdn.net/lyq8479/article/details/9393097" target="_blank" rel="external">微信公众帐号开发教程第12篇-符号表情的发送（上）</a></li>
+</ul>
+<p>准备阶段，把表情包全下载下来，把命名从<code>1</code>开始，随自己喜欢，后面很简单取到图片的名称，页面编写,略过吧。</p>
+<h3 id="2-部分代码分析"><a href="#2-部分代码分析" class="headerlink" title="2.部分代码分析"></a>2.部分代码分析</h3><p>怎么简单怎么写，也不用做映射了：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> emoji_cn=[<span class="string">'[微笑]'</span>,<span class="string">'[撇嘴]'</span>,<span class="string">'[色]'</span>,<span class="string">'[发呆]'</span>,<span class="string">'[得意]'</span>,<span class="string">'[流泪]'</span>,<span class="string">'[害羞]'</span>,<span class="string">'[闭嘴]'</span>,<span class="string">'[睡]'</span>,<span class="string">'[大哭]'</span>,<span class="string">'[尴尬]'</span>,<span class="string">'[发怒]'</span>,<span class="string">'[调皮]'</span>,<span class="string">'[呲牙]'</span>,<span class="string">'[惊讶]'</span>,<span class="string">'[难过]'</span>,<span class="string">'[酷]'</span>,<span class="string">'[冷汗]'</span>,<span class="string">'[折磨]'</span>,<span class="string">'[吐]'</span>,<span class="string">'[偷笑]'</span>,<span class="string">'[可爱]'</span>,<span class="string">'[白眼]'</span>,<span class="string">'[傲慢]'</span>,<span class="string">'[饥饿]'</span>,<span class="string">'[困]'</span>,<span class="string">'[惊恐]'</span>,<span class="string">'[流汗]'</span>,<span class="string">'[憨笑]'</span>,<span class="string">'[大兵]'</span>,<span class="string">'[奋斗]'</span>,<span class="string">'[咒骂]'</span>,<span class="string">'[疑问]'</span>,<span class="string">'[嘘]'</span>,<span class="string">'[晕]'</span>,<span class="string">'[抓狂]'</span>,<span class="string">'[衰]'</span>,<span class="string">'[骷髅]'</span>,<span class="string">'[敲打]'</span>,<span class="string">'[再见]'</span>,<span class="string">'[擦汗]'</span>,<span class="string">'[抠鼻]'</span>,<span class="string">'[鼓掌]'</span>,<span class="string">'[溴大了]'</span>,<span class="string">'[坏笑]'</span>,<span class="string">'[左哼哼]'</span>,<span class="string">'[右哼哼]'</span>,<span class="string">'[哈欠]'</span>,<span class="string">'[鄙视]'</span>,<span class="string">'[委屈]'</span>,<span class="string">'[快哭了]'</span>,<span class="string">'[阴险]'</span>,<span class="string">'[亲亲]'</span>,<span class="string">'[吓]'</span>,<span class="string">'[可怜]'</span>,<span class="string">'[菜刀]'</span>,<span class="string">'[西瓜]'</span>,<span class="string">'[啤酒]'</span>,<span class="string">'[篮球]'</span>,<span class="string">'[乒乓]'</span>,<span class="string">'[咖啡]'</span>,<span class="string">'[饭]'</span>,<span class="string">'[猪头]'</span>,<span class="string">'[玫瑰]'</span>,<span class="string">'[凋谢]'</span>,<span class="string">'[嘴唇]'</span>,<span class="string">'[爱心]'</span>,<span class="string">'[心碎]'</span>,<span class="string">'[蛋糕]'</span>,<span class="string">'[闪电]'</span>,<span class="string">'[炸弹]'</span>,<span class="string">'[刀]'</span>,<span class="string">'[足球]'</span>,<span class="string">'[瓢虫]'</span>,<span class="string">'[便便]'</span>,<span class="string">'[月亮]'</span>,<span class="string">'[太阳]'</span>,<span class="string">'[礼物]'</span>,<span class="string">'[拥抱]'</span>,<span class="string">'[强]'</span>,<span class="string">'[弱]'</span>,<span class="string">'[握手]'</span>,<span class="string">'[胜利]'</span>,<span class="string">'[抱拳]'</span>,<span class="string">'[勾引]'</span>,<span class="string">'[拳头]'</span>,<span class="string">'[差劲]'</span>,<span class="string">'[爱你]'</span>,<span class="string">'[NO]'</span>,<span class="string">'[YES]'</span>,<span class="string">'[爱情]'</span>,<span class="string">'[飞吻]'</span>,<span class="string">'[跳跳]'</span>,<span class="string">'[发抖]'</span>,<span class="string">'[怄火]'</span>,<span class="string">'[转圈]'</span>,<span class="string">'[磕头]'</span>,<span class="string">'[回头]'</span>,<span class="string">'[跳绳]'</span>,<span class="string">'[挥手]'</span>,<span class="string">'[激动]'</span>,<span class="string">'[街舞]'</span>,<span class="string">'[献吻]'</span>,<span class="string">'[左太极]'</span>,<span class="string">'[右太极]'</span>];</div></pre></td></tr></table></figure></p>
+<p>先把编码全部放到一个数组中，按顺序。要么你就存一个对象一个编码对应图片的地址名称，然后显示的时候，直接替换就行，这种比较简单。同事简单做了个，就用这个规则了。<br>想一下我们要的效果是，点击表情，显示所有的表情，官方那用的是一个切图，然后放热点，当然也可以匹配做成动态的，ok我们也这么干。没什么问题。热点点击的时候，把对应图片的编码放到输入的文本框中。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">".em_nr a"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> data_image = $(<span class="keyword">this</span>).data(<span class="string">"image"</span>);</div><div class="line">	$(<span class="string">"#saytext"</span>).val($(<span class="string">"#saytext"</span>).val()+ <span class="string">"["</span> + <span class="keyword">this</span>.title + <span class="string">"]"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>然后我们可以做动态显示了<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//在数组中查找输入的字符串是否含有表情编码，有就替换成图片表情返回预览</span></div><div class="line"><span class="comment">//如果是数组对象，做个映射，我们直接遍历就能取出图片地址名称了，也不用自己去给图片编个名字，省不少事情，霸王硬上弓，先了解了解。</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">replace_img</span>(<span class="params">str</span>)</span>&#123;</div><div class="line">    		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;emoji_cn.length;i++)&#123;</div><div class="line">    			str = str.replace(<span class="built_in">eval</span>(<span class="string">'/\\'</span>+emoji_cn[i]+<span class="string">'/g'</span>),<span class="string">'&lt;img src="face/'</span>+(i+<span class="number">1</span>)+<span class="string">'.gif" border="0" /&gt;'</span>);	</div><div class="line">    		&#125;</div><div class="line">    		<span class="keyword">return</span> str;</div><div class="line">    	&#125;</div><div class="line"><span class="comment">//文本框change事件，右边同步预览</span></div><div class="line">	$(<span class="string">'#saytext'</span>).bind(<span class="string">'input propertychange'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">		<span class="keyword">var</span> str =$(<span class="string">"#saytext"</span>).val();</div><div class="line">		$(<span class="string">"#show"</span>).html(replace_img(str));</div><div class="line">	&#125;);</div></pre></td></tr></table></figure></p>
+<h2 id="文本框改变直接显示输入的结果，这种用-angularjs-的数据模型绑定非常方便。这个地方没有用，纯属练手看原生js怎么实现的，在图文消息部分我们用-angularjs做预览就非常方便了，如果再用-jquery-去写代码，不知道要写多少，还不一定能好实现，有时间把图文预览那块总结发个-demo-上来。"><a href="#文本框改变直接显示输入的结果，这种用-angularjs-的数据模型绑定非常方便。这个地方没有用，纯属练手看原生js怎么实现的，在图文消息部分我们用-angularjs做预览就非常方便了，如果再用-jquery-去写代码，不知道要写多少，还不一定能好实现，有时间把图文预览那块总结发个-demo-上来。" class="headerlink" title="文本框改变直接显示输入的结果，这种用 angularjs 的数据模型绑定非常方便。这个地方没有用，纯属练手看原生js怎么实现的，在图文消息部分我们用 angularjs做预览就非常方便了，如果再用 jquery 去写代码，不知道要写多少，还不一定能好实现，有时间把图文预览那块总结发个 demo 上来。"></a>文本框改变直接显示输入的结果，这种用 <code>angularjs</code> 的数据模型绑定非常方便。这个地方没有用，纯属练手看原生<code>js</code>怎么实现的，在图文消息部分我们用 <code>angularjs</code>做预览就非常方便了，如果再用 <code>jquery</code> 去写代码，不知道要写多少，还不一定能好实现，有时间把图文预览那块总结发个 <code>demo</code> 上来。</h2><h3 id="3-Angularjs实现方式以及优化"><a href="#3-Angularjs实现方式以及优化" class="headerlink" title="3.Angularjs实现方式以及优化"></a>3.Angularjs实现方式以及优化</h3><p>把数据重新组了一下，少了不少代码，被新来的同事整的细碎。</p>
+<h4 id="html代码"><a href="#html代码" class="headerlink" title="html代码"></a>html代码</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-app</span>=<span class="string">"appDemo"</span> <span class="attr">ng-controller</span>=<span class="string">"EmojiDemo"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">""</span> <span class="attr">cols</span>=<span class="string">"30"</span> <span class="attr">rows</span>=<span class="string">"10"</span> <span class="attr">ng-model</span>=<span class="string">"emojStr"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> &gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"replaceStr"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	&#123;&#123;$scope.targetStr&#125;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="简单js"><a href="#简单js" class="headerlink" title="简单js"></a>简单js</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//1.制造数组对象</span></div><div class="line"><span class="comment">//首先执行这个方法，把我们上次的代码，整合成一个数组json对象，这样:var _emoji= [&#123;"emojCode":"[微笑]","target":"1.gif"&#125;,&#123;"emojCode":"[撇嘴]","target":"2.gif"&#125;···];</span></div><div class="line"><span class="comment">//由于图片的命名是有规则的,所以我们直接按照规则办事，直接就映射上了，不用那么笨的去对应index，另外手动去编写这个字符串不得累死105个呢</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createEmojiObj</span>(<span class="params"></span>)</span>&#123;</div><div class="line">			<span class="keyword">var</span> emoji_=[];</div><div class="line">			<span class="keyword">var</span> emoji_cn1=[<span class="string">'[微笑]'</span>,<span class="string">'[撇嘴]'</span>,<span class="string">'[色]'</span>,<span class="string">'[发呆]'</span>,<span class="string">'[得意]'</span>,<span class="string">'[流泪]'</span>,<span class="string">'[害羞]'</span>,<span class="string">'[闭嘴]'</span>,<span class="string">'[睡]'</span>,<span class="string">'[大哭]'</span>,<span class="string">'[尴尬]'</span>,<span class="string">'[发怒]'</span>,<span class="string">'[调皮]'</span>,<span class="string">'[呲牙]'</span>,<span class="string">'[惊讶]'</span>,<span class="string">'[难过]'</span>,<span class="string">'[酷]'</span>,<span class="string">'[冷汗]'</span>,<span class="string">'[折磨]'</span>,<span class="string">'[吐]'</span>,<span class="string">'[偷笑]'</span>,<span class="string">'[可爱]'</span>,<span class="string">'[白眼]'</span>,<span class="string">'[傲慢]'</span>,<span class="string">'[饥饿]'</span>,<span class="string">'[困]'</span>,<span class="string">'[惊恐]'</span>,<span class="string">'[流汗]'</span>,<span class="string">'[憨笑]'</span>,<span class="string">'[大兵]'</span>,<span class="string">'[奋斗]'</span>,<span class="string">'[咒骂]'</span>,<span class="string">'[疑问]'</span>,<span class="string">'[嘘]'</span>,<span class="string">'[晕]'</span>,<span class="string">'[抓狂]'</span>,<span class="string">'[衰]'</span>,<span class="string">'[骷髅]'</span>,<span class="string">'[敲打]'</span>,<span class="string">'[再见]'</span>,<span class="string">'[擦汗]'</span>,<span class="string">'[抠鼻]'</span>,<span class="string">'[鼓掌]'</span>,<span class="string">'[溴大了]'</span>,<span class="string">'[坏笑]'</span>,<span class="string">'[左哼哼]'</span>,<span class="string">'[右哼哼]'</span>,<span class="string">'[哈欠]'</span>,<span class="string">'[鄙视]'</span>,<span class="string">'[委屈]'</span>,<span class="string">'[快哭了]'</span>,<span class="string">'[阴险]'</span>,<span class="string">'[亲亲]'</span>,<span class="string">'[吓]'</span>,<span class="string">'[可怜]'</span>,<span class="string">'[菜刀]'</span>,<span class="string">'[西瓜]'</span>,<span class="string">'[啤酒]'</span>,<span class="string">'[篮球]'</span>,<span class="string">'[乒乓]'</span>,<span class="string">'[咖啡]'</span>,<span class="string">'[饭]'</span>,<span class="string">'[猪头]'</span>,<span class="string">'[玫瑰]'</span>,<span class="string">'[凋谢]'</span>,<span class="string">'[嘴唇]'</span>,<span class="string">'[爱心]'</span>,<span class="string">'[心碎]'</span>,<span class="string">'[蛋糕]'</span>,<span class="string">'[闪电]'</span>,<span class="string">'[炸弹]'</span>,<span class="string">'[刀]'</span>,<span class="string">'[足球]'</span>,<span class="string">'[瓢虫]'</span>,<span class="string">'[便便]'</span>,<span class="string">'[月亮]'</span>,<span class="string">'[太阳]'</span>,<span class="string">'[礼物]'</span>,<span class="string">'[拥抱]'</span>,<span class="string">'[强]'</span>,<span class="string">'[弱]'</span>,<span class="string">'[握手]'</span>,<span class="string">'[胜利]'</span>,<span class="string">'[抱拳]'</span>,<span class="string">'[勾引]'</span>,<span class="string">'[拳头]'</span>,<span class="string">'[差劲]'</span>,<span class="string">'[爱你]'</span>,<span class="string">'[NO]'</span>,<span class="string">'[YES]'</span>,<span class="string">'[爱情]'</span>,<span class="string">'[飞吻]'</span>,<span class="string">'[跳跳]'</span>,<span class="string">'[发抖]'</span>,<span class="string">'[怄火]'</span>,<span class="string">'[转圈]'</span>,<span class="string">'[磕头]'</span>,<span class="string">'[回头]'</span>,<span class="string">'[跳绳]'</span>,<span class="string">'[挥手]'</span>,<span class="string">'[激动]'</span>,<span class="string">'[街舞]'</span>,<span class="string">'[献吻]'</span>,<span class="string">'[左太极]'</span>,<span class="string">'[右太极]'</span>];</div><div class="line">			$.each(emoji_cn1,<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</div><div class="line">				j=i+<span class="number">1</span>;</div><div class="line">				emoji_.push(&#123;emojCode:emoji_cn1[i],target:j+<span class="string">'.gif'</span>&#125;);</div><div class="line">			&#125;)</div><div class="line">			<span class="comment">//document.write(JSON.stringify(emoji_))</span></div><div class="line">			<span class="keyword">return</span> emoji_;</div><div class="line">		&#125;</div><div class="line">	&#125;) ;</div><div class="line"><span class="comment">//2:angularjs实现</span></div><div class="line"><span class="comment">//jquery 实现最简单，都是循环数组，把输入的字符串中有头像code替换成对应的图片</span></div><div class="line"><span class="comment">//字符串转html,并没有用指令去实现或者直接用ng-bindhtml，没必要那么折磨自己，直接jQuery的html()方法就好了</span></div><div class="line"><span class="keyword">var</span> _modul=angular.module(<span class="string">'appDemo'</span>,[]);</div><div class="line">_modul.controller(<span class="string">'EmojiDemo'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope</span>)</span>&#123;</div><div class="line">	$scope.emojStr=<span class="string">"look here[微笑][微笑][微笑][微笑]"</span>;</div><div class="line">	$scope.targetStr=<span class="string">""</span>;</div><div class="line">	<span class="keyword">var</span> _emoji= createEmojiObj();<span class="comment">//可以直接定义出来，没必要浪费效率</span></div><div class="line">	<span class="keyword">var</span> watch=$scope.$watch(<span class="string">'emojStr'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">newValue,oldValue</span>)</span>&#123;</div><div class="line">		$.each(_emoji,<span class="function"><span class="keyword">function</span>(<span class="params">i,value</span>)</span>&#123;</div><div class="line">			<span class="keyword">if</span>(newValue.indexOf(value.emojCode)&gt;=<span class="number">0</span>)&#123;</div><div class="line">				newValue=newValue.replace(<span class="built_in">eval</span>(<span class="string">'/\\'</span>+value.emojCode+<span class="string">'/g'</span>),<span class="string">'&lt;img src="face/'</span>+value.target+<span class="string">'"/&gt;'</span>);	</div><div class="line">			&#125;</div><div class="line">		&#125;);</div><div class="line">		$scope.targetStr=newValue;</div><div class="line">		jQuery(<span class="string">'#replaceStr'</span>).html(newValue);</div><div class="line">	&#125;);<span class="comment">//end watch</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="4-预览"><a href="#4-预览" class="headerlink" title="4.预览"></a>4.预览</h3><p>知道大家都喜欢干货哈，在这里：</p>
+<ul>
+<li>源码在这里：<a href="https://github.com/chanzig/myDemolib/tree/gh-pages/wechat_face" target="_blank" rel="external">github</a></li>
+<li>预览在这里：<a href="http://chanzig.github.io/myDemolib/wechat_face/" target="_blank" rel="external">微信表情包即时预览</a></li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/10/15/Using-Sass-Map-译/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="fa fa-arrow-circle-left article-nav-caption"></i>
+      <div class="article-nav-title">
+        
+          Using Sass Map(译)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/08/19/gh-pages分支/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">gh-pages分支</div>
+      <i class="fa fa-arrow-circle-right article-nav-caption"></i>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="微信表情包即时预览" data-title="微信表情包即时预览" data-url="http://fuchaoo.com/2015/08/20/微信表情包即时预览/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"kapta"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+        
+        &copy; 2016 kapta
+       
+    		<!--&copy; 2016 kapta-->
+    	</div>
+      	<div class="footer-right">
+          
+          <script type="text/javascript">
+           setTimeout(function(){
+              var hjs=document.createElement('script');
+              hjs.setAttribute('src','http://api.hitokoto.us/rand?encode=jsc&fun=async');
+                  document.body.appendChild(hjs);
+              },100);
+              function async(data){
+                $('.header-subtitle').text(data.hitokoto);
+                $('.header-subtitle').prop('title',data.hitokoto);
+                // $('#hitokoto1').text(data.hitokoto);
+              }
+              async()
+         </script>
+
+        <div ><span id="hitokoto1"></span></div>
+      	<!--	<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten -->
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: undefined,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>

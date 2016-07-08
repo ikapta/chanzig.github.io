@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Using Sass Map(译) | kapta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在Sass的第三个版本中引入了一个新的数据类型map,虽然你不熟悉这个名字，但其实我们已经频繁的在其他语言中使用maps，例如处理associative arrays或者hashed。简单的说：一个Sass Map就是一个数组的键值对 key to values。尽管现在我们还是不太清楚为什么要在CSS[Sass is CSS]中使用maps，没关系，这里会有你想要的。这篇文章并不是详尽无疑，但你">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Using Sass Map(译)">
+<meta property="og:url" content="http://fuchaoo.com/2015/10/15/Using-Sass-Map-译/index.html">
+<meta property="og:site_name" content="kapta">
+<meta property="og:description" content="在Sass的第三个版本中引入了一个新的数据类型map,虽然你不熟悉这个名字，但其实我们已经频繁的在其他语言中使用maps，例如处理associative arrays或者hashed。简单的说：一个Sass Map就是一个数组的键值对 key to values。尽管现在我们还是不太清楚为什么要在CSS[Sass is CSS]中使用maps，没关系，这里会有你想要的。这篇文章并不是详尽无疑，但你">
+<meta property="og:updated_time" content="2016-07-08T21:03:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Using Sass Map(译)">
+<meta name="twitter:description" content="在Sass的第三个版本中引入了一个新的数据类型map,虽然你不熟悉这个名字，但其实我们已经频繁的在其他语言中使用maps，例如处理associative arrays或者hashed。简单的说：一个Sass Map就是一个数组的键值对 key to values。尽管现在我们还是不太清楚为什么要在CSS[Sass is CSS]中使用maps，没关系，这里会有你想要的。这篇文章并不是详尽无疑，但你">
+  
+    <link rel="alternative" href="/atom.xml" title="kapta" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="http://cdn.bootcss.com/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+  <link rel="stylesheet" href="/css/style.css">
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?f4d605ca44729299657cb73d8ac86d2d";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+    
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/MyImg.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">kapta</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle" title="">男人许下的诺言就一定要遵守</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/chanzig" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/338944949" title="weibo">weibo</a>
+					        
+								<a class="csdn" target="_blank" href="http://blog.csdn.net/chanzig" title="csdn">csdn</a>
+					        
+								<a class="segment" target="_blank" href="http://segmentfault.com/u/kapta" title="segment">segment</a>
+					        
+								<a class="alipay" target="_blank" href="javascript:void(0)" title="alipay">alipay</a>
+					        
+								<a class="wechat" target="_blank" href="javascript:void(0)" title="wechat">wechat</a>
+					        
+								<a class="zhihu" target="_blank" href="http://zhihu.com/people/kapta" title="zhihu">zhihu</a>
+					        
+								<a class="douban" target="_blank" href="http://www.douban.com/people/chanzig/" title="douban">douban</a>
+					        
+								<a class="mail" target="_blank" href="mailto:kapta.fu@outlook.com" title="mail">mail</a>
+					        
+								<a class="facebook" target="_blank" href="#" title="facebook">facebook</a>
+					        
+								<a class="twitter" target="_blank" href="https://twitter.com/chanzig" title="twitter">twitter</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/JavaScript时间/" style="font-size: 10px;">JavaScript时间</a> <a href="/tags/Map/" style="font-size: 10px;">Map</a> <a href="/tags/Sass/" style="font-size: 10px;">Sass</a> <a href="/tags/borwser-sync/" style="font-size: 10px;">borwser-sync</a> <a href="/tags/gh-pages/" style="font-size: 10px;">gh-pages</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/glup/" style="font-size: 10px;">glup</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/js片段/" style="font-size: 10px;">js片段</a> <a href="/tags/licence/" style="font-size: 10px;">licence</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/qq表情/" style="font-size: 10px;">qq表情</a> <a href="/tags/rem/" style="font-size: 10px;">rem</a> <a href="/tags/sts/" style="font-size: 10px;">sts</a> <a href="/tags/subline/" style="font-size: 10px;">subline</a> <a href="/tags/tab/" style="font-size: 10px;">tab</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a> <a href="/tags/touch/" style="font-size: 10px;">touch</a> <a href="/tags/viewport/" style="font-size: 20px;">viewport</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/微信预览/" style="font-size: 10px;">微信预览</a> <a href="/tags/成长记录/" style="font-size: 10px;">成长记录</a> <a href="/tags/移动h5/" style="font-size: 10px;">移动h5</a> <a href="/tags/译/" style="font-size: 10px;">译</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">kapta</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+				<img lazy-src="/img/MyImg.jpg" class="js-avatar">
+			</a>
+			<hgroup>
+			  <h1 class="header-author">kapta</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">男人许下的诺言就一定要遵守</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/chanzig" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/338944949" title="weibo">weibo</a>
+			        
+						<a class="csdn" target="_blank" href="http://blog.csdn.net/chanzig" title="csdn">csdn</a>
+			        
+						<a class="segment" target="_blank" href="http://segmentfault.com/u/kapta" title="segment">segment</a>
+			        
+						<a class="alipay" target="_blank" href="javascript:void(0)" title="alipay">alipay</a>
+			        
+						<a class="wechat" target="_blank" href="javascript:void(0)" title="wechat">wechat</a>
+			        
+						<a class="zhihu" target="_blank" href="http://zhihu.com/people/kapta" title="zhihu">zhihu</a>
+			        
+						<a class="douban" target="_blank" href="http://www.douban.com/people/chanzig/" title="douban">douban</a>
+			        
+						<a class="mail" target="_blank" href="mailto:kapta.fu@outlook.com" title="mail">mail</a>
+			        
+						<a class="facebook" target="_blank" href="#" title="facebook">facebook</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/chanzig" title="twitter">twitter</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Using-Sass-Map-译" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/10/15/Using-Sass-Map-译/" class="article-date">
+  	<time datetime="2015-10-14T17:21:00.000Z" itemprop="datePublished">2015-10-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Using Sass Map(译)
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Map/">Map</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/译/">译</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在Sass的第三个版本中引入了一个新的数据类型<code>map</code>,虽然你不熟悉这个名字，但其实我们已经频繁的在其他语言中使用<code>maps</code>，例如处理<code>associative arrays</code>或者<code>hashed</code>。简单的说：一个<code>Sass Map</code>就是一个数组的键值对 <code>key to values</code>。<br>尽管现在我们还是不太清楚为什么要在<code>CSS</code>[Sass is CSS]中使用<code>maps</code>，没关系，这里会有你想要的。这篇文章并不是详尽无疑，但你可以轻松的去发现、分享和使用这些案例。</p>
+<h2 id="语法-for-Sass-Maps"><a href="#语法-for-Sass-Maps" class="headerlink" title="语法 for Sass Maps"></a>语法 for Sass Maps</h2><p>在进一步讨论之前，让我们每一个人站在同一个起跑线上。<br><code>Sass</code>地图使用括号作为外部的分隔符，冒号映射键和值，逗号来分割键/值对。下面就是一个规范的<code>Sass Map</code><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$map:(</div><div class="line">    key: value,</div><div class="line">    other-key: value</div><div class="line">)</div></pre></td></tr></table></figure></p>
+<p>看了上面，接下来有几件事你应该知道：<br><a id="more"></a></p>
+<ul>
+<li>我们有很多<code>functions</code>可以让你轻松的处理这些<code>maps</code><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#map-functions" target="_blank" rel="external">传送门</a></li>
+<li>在<code>Map</code>上的最后一个键/值对,可以选择跟一个逗号</li>
+<li>键必须唯一</li>
+<li>键和值可以是任意的<code>Sass</code>类型，例如<code>lists</code> 或者 <code>maps</code></li>
+</ul>
+<p>再强调一次，<code>keys</code>不一定就是<code>string</code>,可以是任何东西：<code>null</code>或者<code>maps</code>。几周前，我和Chris Eppstein, Micah Godbolt, Jackie Balzer有个激烈讨论。<a href="http://www.sitepoint.com/using-sass-maps/" target="_blank" rel="external">传送门</a>就是在<code>JavaScript</code>中有一种场合，我觉得很不满意，它不使用字符串作为<code>hash key</code>。但是在Sass中，没有什么不可能。</p>
+<p>Okay,现在我们可以出发了。</p>
+<h2 id="项目配置-Project-Configuration"><a href="#项目配置-Project-Configuration" class="headerlink" title="项目配置 Project Configuration"></a>项目配置 Project Configuration</h2><p>让我们从一个简单的使用场合开始。<code>Maps</code>很容易在项目中配置使用。很简单：把键值对匹配上，然后我们就可以在项目中的任何地方通过 <code>map-get($map,$key)</code> 这个方法引用。<br>其实我已经在我的这篇文章<a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/" target="_blank" rel="external">在Sass中管理响应式breakpoint</a>中使用过这个方法，下面是一个简单的例子：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">// _config.scss</div><div class="line">$breakpoints: (</div><div class="line">  small: 767px,</div><div class="line">  medium: 992px,</div><div class="line">  large: 1200px</div><div class="line">);</div><div class="line"></div><div class="line">// _mixins.scss</div><div class="line">@mixin respond-to($breakpoint) &#123; </div><div class="line">  @if map-has-key($breakpoints, $breakpoint) &#123;</div><div class="line">    @media (min-width: #&#123;map-get($breakpoints, $breakpoint)&#125;) &#123;</div><div class="line">      @content;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  @else &#123;</div><div class="line">    @warn "Unfortunately, no value could be retrieved from `#&#123;$breakpoint&#125;`. "</div><div class="line">        + "Please make sure it is defined in `$breakpoints` map.";</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// _component.scss</div><div class="line">.element &#123;</div><div class="line">  color: hotpink;</div><div class="line"></div><div class="line">  @include respond-to(small) &#123;</div><div class="line">    color: tomato;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>编译结果：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.element</span> &#123;</div><div class="line">  <span class="attribute">color</span>: hotpink;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@<span class="keyword">media</span> (min-width: <span class="number">767px</span>) &#123;</div><div class="line">  <span class="selector-class">.element</span> &#123;</div><div class="line">    <span class="attribute">color</span>: tomato;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>是不是很酷。另一个非常棒的案例是对 <code>color</code> 的处理。项目中，我们经常为 <code>color</code> 用 <code>variables</code> 区分开是很nice的，但是当你有数十个变量值的时候，会变的很凌乱。所以为主题 <code>color</code> 制作一个 <code>map</code>, 再拆分出一些 <code>sub-maps</code>，这应该是一个不错的idea。<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// _config.scss</span></div><div class="line"><span class="variable">$colors</span>: (</div><div class="line">  sexy: <span class="number">#FA6ACC</span>,</div><div class="line">  glamour: <span class="number">#F02A52</span>,</div><div class="line">  sky: <span class="number">#09A6E4</span></div><div class="line">);</div><div class="line"></div><div class="line"><span class="comment">// _component.scss</span></div><div class="line"><span class="selector-class">.element</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: map-get(<span class="variable">$colors</span>, sky);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>最终，你可能会厌倦一遍又一遍的通过<code>map-get($colors,...)</code>去取值。没关系，我们可以通过一个简单的<code>helper function</code>来缓解你的痛苦：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// _functions.scss</span></div><div class="line"><span class="variable">@function</span> color($key) &#123;</div><div class="line">  <span class="variable">@if</span> map-has-key($colors, $key) &#123;</div><div class="line">    <span class="variable">@return</span> map-get($colors, $key);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="variable">@warn</span> <span class="string">"Unknown `#&#123;$key&#125;` in $colors."</span>;</div><div class="line">  <span class="variable">@return</span> null;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// _component.scss</span></div><div class="line">.element &#123;</div><div class="line">  <span class="attribute">background-color</span>: color(sky); <span class="comment">// #09A6E4</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在这个话题，我觉得你可能有兴趣去读一读Erskine Design写的 <a href="http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/" target="_blank" rel="external">这篇文章</a>。</p>
+<p>让我们看一下最后一个<code>maps</code>项目配置使用案例 <em>z-index layers</em>。我觉得这个写法配置第一次出现在Chiris Coyier 的文章中  <a href="http://css-tricks.com/handling-z-index/" target="_blank" rel="external">Handling z-index</a>。你是不是经常这样干<code>z-index:999999999</code>？好的，现在一切都结束了。<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// _config.scss</span></div><div class="line"><span class="variable">$z-layers</span>: (</div><div class="line">  bottomless-pit: -<span class="number">9999</span>,</div><div class="line">  default: <span class="number">1</span>,</div><div class="line">  dropdown: <span class="number">3000</span>,</div><div class="line">  overlay: <span class="number">4000</span></div><div class="line">  modal: <span class="number">4001</span></div><div class="line">);</div><div class="line"></div><div class="line"><span class="comment">// _functions.scss</span></div><div class="line">@function z(<span class="variable">$key</span>) &#123;</div><div class="line">  @<span class="keyword">if</span> map-has-key(<span class="variable">$z-layers</span>, <span class="variable">$key</span>) &#123;</div><div class="line">    @return map-get(<span class="variable">$z-layers</span>, <span class="variable">$key</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  @<span class="keyword">warn</span> <span class="string">"Unknown `#&#123;$key&#125;` in $z-layers."</span>;</div><div class="line">  @return null;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// _component.scss</span></div><div class="line"><span class="selector-class">.overlay</span> &#123;</div><div class="line">  <span class="attribute">z-index</span>: z(overlay);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.element</span> &#123;</div><div class="line">  <span class="attribute">z-index</span>: (z(default) + <span class="number">1</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>鉴于我们搞砸了<code>z-index</code>，我觉得把把所有的<code>index</code>放到一个简单的<code>map</code>中，并且始终坚持使用维护他们。以后你就会知道你的程序中有多少<code>layer</code>层在使用，而且很清楚的知道程序发生了什么，同时很容易清晰的去<code>debug</code>。</p>
+<h2 id="模块配置-Module-Configuration"><a href="#模块配置-Module-Configuration" class="headerlink" title="模块配置 Module Configuration"></a>模块配置 Module Configuration</h2><p>我们必须始终坚持组织配置，才能让我们进一步深入应用程序管理，解决模块/组件配置。我已经写了一篇文章<a href="http://hugogiraudel.com/2014/05/05/bringing-configuration-objects-to-sass/" target="_blank" rel="external">Bringing Configuration Objects To Sass</a> 使用<code>Sass Maps</code>来管理配置对象，并且它为什么值得去挖掘值得这样做。概念验证：<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// _mixins.scss</span></div><div class="line">@<span class="keyword">mixin</span> module(<span class="variable">$options</span>: ()) &#123;</div><div class="line">  <span class="variable">$configuration</span>: map-merge((</div><div class="line">    color: grey,</div><div class="line">    duration: <span class="number">0s</span>,</div><div class="line">    border: null</div><div class="line">  ), <span class="variable">$options</span>);</div><div class="line"></div><div class="line">  <span class="attribute">color</span>: map-get(<span class="variable">$configuration</span>, color);</div><div class="line">  <span class="attribute">transition</span>: map-get(<span class="variable">$configuration</span>, duration);</div><div class="line">  <span class="attribute">border</span>: map-get(<span class="variable">$configuration</span>, border);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// _component.scss</span></div><div class="line"><span class="selector-class">.element</span> &#123;</div><div class="line">  @<span class="keyword">include</span> module((</div><div class="line">    color: pink,</div><div class="line">    duration: .15s</div><div class="line">  ));</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>上面这种方案有一个问题，它使得 <code>mixin signature</code> 非常通用。在生活中，一个signature签名代表了一个人。当我们看一个  <code>function/mixin</code> 签名的时候，我们必须去看哪些参数被执行了，执行了什么，生成了什么<code>css</code>。这种方式不对，因为我们必须去看这个 <code>mixin</code> 默认的参数操作，才知道发生了什么。</p>
+<p>为了解决这个问题，我们定义一个详细的<code>signature</code>(常规的多个参数)的 <code>mixin</code> 然后只包含一个配置图 <code>configuration map</code>，让我们重写之前的例子。<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// _mixins.scss</span></div><div class="line">@<span class="keyword">mixin</span> module(<span class="variable">$color</span>: grey, <span class="variable">$duration</span>: 0s, <span class="variable">$border</span>: null) &#123;</div><div class="line">  <span class="attribute">color</span>: <span class="variable">$color</span>;</div><div class="line">  <span class="attribute">transition</span>: <span class="variable">$duration</span>;</div><div class="line">  <span class="attribute">border</span>: <span class="variable">$border</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// _component.scss</span></div><div class="line"><span class="selector-class">.element</span> &#123;</div><div class="line">  @<span class="keyword">include</span> module((</div><div class="line">    duration: .15s,</div><div class="line">    color: pink</div><div class="line">  )...);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在这种情况下, <code>…</code> 扩展映射的值,这样每一对都被视为一个关键字参数。不仅使<code>mixin signature</code> 更加明确，也为之前<code>map-merging</code>的 <code>mixin&#39;s core</code> 留出了位置。<br>因此这样你可以使用<code>Sass Maps</code>去配置包含多个参数的<code>mixin</code>,如果我没弄错的话，<code>Pathon</code> 是为数不多的几个(著名)的语言允许你调用一个含有多个参数的二维数组的函数。我想说的是，<code>Sass</code> 也可以做到到。</p>
+<h2 id="解决冗余-Repetitive-Stuff"><a href="#解决冗余-Repetitive-Stuff" class="headerlink" title="解决冗余 Repetitive Stuff"></a>解决冗余 Repetitive Stuff</h2><p>到现在,我们仅仅使用 <code>map</code> 获得到一个特定的键和它相关联的值。另一个功能是避免写重复的东西。<code>CSS</code> 是一种非常<strong>WET</strong>(write everything twice)的语言,代码重复很普遍。这就需要一个循环和一个<code>list/map</code> 来帮你这么干，帮助你解决代码<strong>DRY</strong>(Don’t Repeat Yourself)。<br>来看着下面的 <code>icon fonts</code>，通常都是在<code>:before</code>伪类之前放一个对应的名字，例如：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.fa-glass</span><span class="selector-pseudo">:before</span> &#123;</div><div class="line">  <span class="attribute">content</span>: <span class="string">"\f000"</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.fa-music</span><span class="selector-pseudo">:before</span> &#123;</div><div class="line">  <span class="attribute">content</span>: <span class="string">"\f001"</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.fa-search</span><span class="selector-pseudo">:before</span> &#123;</div><div class="line">  <span class="attribute">content</span>: <span class="string">"\f002"</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.fa-envelope-o</span><span class="selector-pseudo">:before</span> &#123;</div><div class="line">  <span class="attribute">content</span>: <span class="string">"\f003"</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.fa-heart</span><span class="selector-pseudo">:before</span> &#123;</div><div class="line">  <span class="attribute">content</span>: <span class="string">"\f004"</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* ... */</span></div></pre></td></tr></table></figure></p>
+<p>Wow.太重复了，太多<strong>WET</strong>，我们为什么不直接把类名映射到字符编码？<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$icons</span>: (</div><div class="line">  glass: <span class="string">"\f000"</span>,</div><div class="line">  music: <span class="string">"\f001"</span>,</div><div class="line">  search: <span class="string">"\f002"</span>,</div><div class="line">  envelope-o: <span class="string">"\f003"</span>,</div><div class="line">  heart: <span class="string">"\f004"</span></div><div class="line">);</div><div class="line"></div><div class="line">@<span class="keyword">each</span> <span class="variable">$name</span>, <span class="variable">$icon</span> in <span class="variable">$icons</span> &#123;</div><div class="line">  <span class="selector-class">.fa-</span>#&#123;<span class="variable">$name</span>&#125;:before &#123;</div><div class="line">    <span class="attribute">content</span>: <span class="variable">$icon</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>很好，不是吗？尤其是当你有很多很多的图标的字体的时候就该这么做。如果你想了解更多，<code>Frédéric Perrin</code>通过这种非常棒的方法创建了 <a href="http://codepen.io/blustemy/pen/mifBg?editors=010" target="_blank" rel="external">a cool little demo</a> 在 <code>CodePen</code> 上；另外<a href="https://robots.thoughtbot.com/removing-sass-duplication" target="_blank" rel="external">一篇文章</a>以同样的方式来处理背景图片。</p>
+<h2 id="CSS-存储（Dump）"><a href="#CSS-存储（Dump）" class="headerlink" title="CSS 存储（Dump）"></a>CSS 存储（Dump）</h2><p>如果我没记错的话，<code>Micah Godbolt</code> 写的<a href="http://www.phase2technology.com/blog/exploring-maps-in-sass-3-3/" target="_blank" rel="external">这篇文章</a>是第一次通过一个案例介绍这个<code>CSS Dump</code>。接下来，我们通过使用<code>Sass Map</code>作为一个<code>CSS list</code>的声明。你看，你看,<code>Sass</code>维护者尽力坚持尽可能接近官方的<code>CSS</code>语法在实现新功能。这就是为什么他们决定用 <code>()</code>括 号作为<code>list/maps(在媒体查询中使用)</code>，冒号作为映射操作（在任何声明中使用）。</p>
+<p>因为<code>Sass maps</code>看起来像一个 <code>css list</code>规则，你可能写一个 <code>mixin</code> 去存储一个<code>Sass Map</code>的内容：<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// _mixins.scss</span></div><div class="line">@mixin <span class="keyword">print</span>($declarations) &#123;</div><div class="line">  @each $property, $value <span class="keyword">in</span> $declarations &#123;</div><div class="line">    #&#123;$property&#125;: $value</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// _component.scss</span></div><div class="line">.element &#123;</div><div class="line">  @include <span class="keyword">print</span>((</div><div class="line">    margin: <span class="number">0</span> auto,</div><div class="line">    <span class="keyword">max</span>-width: <span class="number">50</span>%,</div><div class="line">    overflow: hidden</div><div class="line">  ));</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>现在你有可能会去想，为什么要这样？为什么不直接写<code>css</code> 而是通过一个<code>mixin</code>?这个和上下文有关，当处理一个<code>module or something</code>,通常使用地图存储几个变量，然后组件应该怎样显示。例如：<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// _component.scss</span></div><div class="line"><span class="variable">$configuration</span>: (</div><div class="line">  padding: <span class="number">1em</span>,</div><div class="line">  margin: <span class="number">0</span> <span class="number">1em</span>,</div><div class="line">  color: grey</div><div class="line">);</div><div class="line"></div><div class="line"><span class="selector-class">.element</span> &#123;</div><div class="line">  <span class="attribute">color</span>: map-get(<span class="variable">$configuration</span>, color);</div><div class="line">  <span class="attribute">padding</span>: map-get(<span class="variable">$configuration</span>, padding);</div><div class="line">  <span class="attribute">margin</span>: map-get(<span class="variable">$configuration</span>, margin);</div><div class="line"></div><div class="line">  &amp;::before &#123;</div><div class="line">    <span class="attribute">background-color</span>: map-get(<span class="variable">$configuration</span>, color);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>没必要每次获通过<code>key</code>去获取<code>value</code>,我们应该简单的写个 <code>css() mixin</code> 来打印输出<code>map</code>:<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// _component.scss</span></div><div class="line"><span class="selector-class">.element</span> &#123;</div><div class="line">  @<span class="keyword">include</span> print(<span class="variable">$configuration</span>);</div><div class="line"></div><div class="line">  &amp;::before &#123;</div><div class="line">    <span class="attribute">background-color</span>: map-get(<span class="variable">$configuration</span>, color);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>编译结果：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.element</span> &#123;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">1em</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">1em</span>;</div><div class="line">  <span class="attribute">color</span>: grey;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.element</span><span class="selector-pseudo">::before</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: grey;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这足以解释<code>sass map</code>,但一切并没有结束，还有更多的东西值得我们去挖掘。</p>
+<h2 id="Final-Thoughts"><a href="#Final-Thoughts" class="headerlink" title="Final Thoughts"></a>Final Thoughts</h2><p>如您所见,Sass地图特性是一个强大的工具。它不仅使代码更加结构化,同时也可以帮助你避免一些代码膨胀和重复。你呢,你怎样使用<code>Sass Map</code>?</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/10/15/test/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="fa fa-arrow-circle-left article-nav-caption"></i>
+      <div class="article-nav-title">
+        
+          test
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/08/20/微信表情包即时预览/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">微信表情包即时预览</div>
+      <i class="fa fa-arrow-circle-right article-nav-caption"></i>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Using-Sass-Map-译" data-title="Using Sass Map(译)" data-url="http://fuchaoo.com/2015/10/15/Using-Sass-Map-译/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"kapta"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+        
+        &copy; 2016 kapta
+       
+    		<!--&copy; 2016 kapta-->
+    	</div>
+      	<div class="footer-right">
+          
+          <script type="text/javascript">
+           setTimeout(function(){
+              var hjs=document.createElement('script');
+              hjs.setAttribute('src','http://api.hitokoto.us/rand?encode=jsc&fun=async');
+                  document.body.appendChild(hjs);
+              },100);
+              function async(data){
+                $('.header-subtitle').text(data.hitokoto);
+                $('.header-subtitle').prop('title',data.hitokoto);
+                // $('#hitokoto1').text(data.hitokoto);
+              }
+              async()
+         </script>
+
+        <div ><span id="hitokoto1"></span></div>
+      	<!--	<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten -->
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: undefined,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>
